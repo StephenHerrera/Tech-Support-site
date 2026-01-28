@@ -1,0 +1,244 @@
+/* Stephen Herrera */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f6f7f9;
+    color: #222;
+    line-height: 1.5;
+}
+
+header,
+main,
+footer {
+    max-width: 68.75em;
+    margin: 0 auto;
+    padding: 0 3em;
+}
+
+img {
+    max-width: 15%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: #8b5e34;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: .15rem solid #caa57d;
+    outline-offset: .25rem;
+}
+
+header img {
+    position: absolute;
+    max-width: 10%;
+    top: 0.75rem;
+    left: 1rem;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e3e5e8;
+    padding: 1rem 0;
+    background-image: linear-gradient(to bottom, #ffffff, #fbfbfb);
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.65em;
+}
+
+header h1 a {
+    color: #1f1f1f;
+}
+
+header h1 em {
+    color: #8b5e34;
+    font-style: normal;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: .75em 0 .5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: inline-block;
+    padding: .5rem 1.25rem;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    color: #333;
+    background-color: transparent;
+}
+
+nav a:hover {
+    background-color: #eef1f4;
+}
+
+#current {
+    background-color: #e9dccf;
+    color: #1f1f1f;
+    border-color: #dbc8b1;
+    box-shadow: 0 1px 0 #dbc8b1;
+}
+
+main section {
+    padding: 1rem 0;
+}
+
+h2, h3, h4 {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.85em;
+    color: #3a2c1f;
+}
+
+h3 {
+    font-size: 1.35em;
+    color: #2f2f2f;
+}
+
+h4 {
+    font-size: 1.25em;
+    color: #8b5e34;
+}
+
+section:first-of-type {
+    background-image: linear-gradient(180deg, #ffffff, #fafbfc);
+    border-bottom: 1px solid #e3e5e8;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+section:first-of-type a {
+    display: inline-block;
+    padding: .7rem 1.2rem;
+    border-radius: 10px;
+    border: 1px solid #8b5e34;
+    background-color: #8b5e34;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+section:first-of-type
+a:hover {
+    background-color: #7a512b;
+    border-color: #7a512b;
+}
+
+section:nth-of-type(2) h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+section:nth-of-type(2) article {
+    background-color: #ffffff;
+    border: 1px solid #e8eaed;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+article img {
+    float: right;
+    margin-right: 1rem;
+    margin-top: -7.5rem;
+    height: auto;
+}
+
+#printBtn {
+    padding: .7rem 1rem;
+    background-color: #8b5e34;
+    color: #fff;
+    border: 1px solid #8b5e34;
+    border-radius: .6rem;
+    font-weight: 600;
+    float: right;
+    margin-top: -3rem;
+    margin-right: 1rem;
+}
+
+#printBtn:hover {
+    background-color: #7a512b;
+    border-color: #7a512b;
+}
+
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e3e5e8;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.95em;
+}
+
+footer a {
+    color: #8b5e34;
+}
+
+@media (min-width: 800px) {
+    section#service-pricing-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    section#service-pricing-wrapper > div {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 1.25rem;
+        align-items: start;
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 600px) {
+    header,
+    main,
+    footer {
+        padding: 0 1rem;
+    }
+    h1 {
+        font-size: 1.4rem;
+    }
+    nav ul {
+        gap: 0.25rem;
+    }
+    header img, img {
+        display: none;
+    }
+    #printBtn {
+        display: none;
+    }
+    section:first-of-type a {
+      font-weight: 400;
+  }
+}
+
+@media (min-width: 1000px) {
+    h1 {
+        font-size: 2rem;
+    }
+    main section {
+        padding: 2.25rem 0;
+    }
+}

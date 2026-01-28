@@ -1,0 +1,29 @@
+/* Stephen Herrera */
+
+html {
+    background: none;
+}
+
+body {
+    border: none;
+    box-shadow: none;
+}
+
+main section:last-of-type {
+    font-family: "Times New Roman", Times, serif;
+}
+
+main section:last-of-type h3,
+main section:last-of-type h4 {
+    font-family: "Century Gothic", Verdana, sans-serif;
+}
+
+header img,
+nav,
+footer,
+aside,
+main section:first-of-type a,
+#printBtn,
+img {
+    display: none;
+}

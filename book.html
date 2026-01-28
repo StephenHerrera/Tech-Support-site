@@ -1,0 +1,99 @@
+<!doctype html>
+<!-- Stephen Herrera -->
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cape Fear Tech Support — Book Help</title>
+  <link rel="stylesheet" href="styles/main.css">
+
+  <style>
+    label { float: left; width: 30%; text-align: right; margin-right: 2%; }
+    form p { margin: .5rem 0; overflow: auto; }
+    input[type="text"], input[type="email"], input[type="tel"], 
+    select, textarea { width: 60%; display: inline-block; }
+    input[type="submit"] {
+      background: #8b5e34;
+      border: 2px solid #000;
+      display: block;
+      margin-left: 32%;
+      padding: .25rem 1.5rem;
+      cursor: pointer;
+    }
+    textarea { min-height: 7rem; }
+    section:first-of-type {
+      text-align: left;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <img src="images/Logo.png" alt="Tech Support Logo">
+    <h1><a href="index.html">Cape Fear <em>Tech Support</em></a></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="book.html" id="current">Book</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1 id="book-title">Request Help</h1>
+      <form id ="helpForm" action="confirmation.html" method="get">
+        <p>
+          <label for="name">Full name:</label>
+          <input id="name" name="name" type="text" required autofocus autocomplete="name" placeholder="Jane Doe">
+        </p>
+        <p>
+          <label for="phone">Phone:</label>
+          <input id="phone" name="phone" type="tel" required autocomplete="tel"
+                 placeholder="(555) 123-4567"
+                 title="phone number">
+        </p>
+        <p>
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+        </p>
+        <p>
+          <label for="device">Device:</label>
+          <select id="device" name="device" required>
+            <option value="" disabled selected>Select a device</option>
+            <option>Windows PC</option>
+            <option>Mac</option>
+            <option>iPhone</option>
+            <option>Android Phone</option>
+            <option>Tablet (iPad/Android)</option>
+            <option>Smart TV / Streaming Device</option>
+            <option>Router / Modem</option>
+            <option>Printer</option>
+            <option>Other</option>
+          </select>
+        </p>
+        <p>
+          <label for="desc">What do you need help with?</label>
+          <textarea id="desc" name="description" required
+            placeholder="Describe the issue (what's happening, when it started, any error messages)…"></textarea>
+        </p>
+        <p>
+          <input type="submit" value="Submit Request">
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+
+  <footer>
+    <p>&copy; 2025 • Cape Fear Tech Support - Wilmington, NC •
+      <a href="CapeFearTech@gmail.com">CapeFearTech@gmail.com</a>
+    </p>
+  </footer>
+</body>
+</html>
